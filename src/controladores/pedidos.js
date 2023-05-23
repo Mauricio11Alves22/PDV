@@ -8,7 +8,7 @@ const cadastrarPedido = async (req, res) => {
     const dadosPedido = await knex('pedidos').insert({
         cliente_id,
         observacao,
-        valor_total: 2,
+        valor_total: '',
     })
 
     const idPedido = await knex('pedidos').where({cliente_id}).select('id').first()
